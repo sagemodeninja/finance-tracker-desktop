@@ -4,6 +4,9 @@
   "description": "Track finances",
   "main": "main.js",
   "scripts": {
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production",
+    "dev": "webpack --watch --mode=development",
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make"
@@ -23,9 +26,19 @@
     "@electron-forge/plugin-auto-unpack-natives": "^7.6.0",
     "@electron-forge/plugin-fuses": "^7.6.0",
     "@electron/fuses": "^1.8.0",
-    "electron": "^33.2.1"
+    "electron": "^33.2.1",
+    "html-webpack-plugin": "^5.6.3",
+    "css-loader": "^6.8.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "electron-squirrel-startup": "^1.0.1",
+    "lit": "^3.2.1"
   }
 }
