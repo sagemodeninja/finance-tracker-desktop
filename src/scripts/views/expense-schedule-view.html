@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Schedule</title>
+</head>
+<body>
+    <a href="index.html">Home</a>
+    <button id="add_expense_btn">+</button>
+    <div id="container"></div>
+    <modal-dialog id="form_dialog">
+        <div>
+            <bound-form id="form">
+                <form-item
+                    name="name"
+                    label="Name"
+                    trigger="input"
+                    required>
+                    <text-field placeholder="Name">
+                    </text-field>
+                </form-item>
+            </bound-form>
+            <button id="submit-button">Save</button>
+        </div>
+    </modal-dialog>
+</body>
+</html>

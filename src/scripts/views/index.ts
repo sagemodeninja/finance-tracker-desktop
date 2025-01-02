@@ -1,23 +1,23 @@
 import '@larinonpm/components'
-import { Liability } from '@/entities'
+import { Expense } from '@/entities'
+import { Frequency } from '@/enums'
 
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('#container')
 
-    const liabilities = Array.from({ length: 10 }, (_, i) => {
+    const expenses = Array.from({ length: 10 }, (_, i) => {
         return {
             id: i.toString(),
             name: `Liability ${i}`,
-            startDate: new Date(10000),
-            endDate: new Date(10001),
-            total: 1000
-        } as Liability
+            frequency: i % 2,
+            amount: 1000,
+        } as Expense
     })
 
-    console.log(liabilities)
-    const items = liabilities.map(l => {
+    console.log(expenses)
+    const items = expenses.map(e => {
         const div = document.createElement('div')
-        div.innerText = `${l.id}: ${l.name}`
+        div.innerText = `${e.id}: ${e.name}: ${Frequency[e.frequency]}: ${e.amount}`
         return div
     })
 
